@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_37d9139bfb687fb387326b110c992d6f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>
+    
+    
+    <div style="position: fixed; bottom: 50px; left: 50px; width: 220px; 
+         border:2px solid grey; z-index:9999; font-size:14px;
+         background-color:white; padding: 10px;">
+      <b>Legend</b><br>
+      <i class="fa fa-map-marker fa-2x" style="color:cadetblue"></i>&nbsp; Family / Memoir<br>
+      <i class="fa fa-map-marker fa-2x" style="color:darkred"></i>&nbsp; Community / Religious<br>
+      <i class="fa fa-map-marker fa-2x" style="color:orange"></i>&nbsp; Cultural / Modern<br>
+      <i class="fa fa-map-marker fa-2x" style="color:green"></i>&nbsp; Museums / Memory<br>
+    </div>
+    
+            <div class="folium-map" id="map_37d9139bfb687fb387326b110c992d6f" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_37d9139bfb687fb387326b110c992d6f = L.map(
+                "map_37d9139bfb687fb387326b110c992d6f",
+                {
+                    center: [52.236, 21.017],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 14,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_58ce21cf258364e9f7350dda5e3c8634 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_37d9139bfb687fb387326b110c992d6f);
+        
+    
+            var marker_2a149ace748e7e84b3adc8bcaefe6ee1 = L.marker(
+                [52.2326, 21.0206],
+                {}
+            ).addTo(map_37d9139bfb687fb387326b110c992d6f);
+        
+    
+            var icon_68a4b37c49f33a4d92b4348d19c7dc35 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "cadetblue", "prefix": "glyphicon"}
+            );
+            marker_2a149ace748e7e84b3adc8bcaefe6ee1.setIcon(icon_68a4b37c49f33a4d92b4348d19c7dc35);
+        
+    
+            marker_2a149ace748e7e84b3adc8bcaefe6ee1.bindTooltip(
+                `<div>
+                     1. Nowy Świat 64
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_46119042c6221a4020be6409b0e5cc1c = L.marker(
+                [52.241, 21.0192],
+                {}
+            ).addTo(map_37d9139bfb687fb387326b110c992d6f);
+        
+    
+            var icon_b5588219db57c2eef882955bffcff8d6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_46119042c6221a4020be6409b0e5cc1c.setIcon(icon_b5588219db57c2eef882955bffcff8d6);
+        
+    
+            marker_46119042c6221a4020be6409b0e5cc1c.bindTooltip(
+                `<div>
+                     2. University of Warsaw area
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e4dc3e6b973accafcc43d5320fde9121 = L.marker(
+                [52.2433, 20.9998],
+                {}
+            ).addTo(map_37d9139bfb687fb387326b110c992d6f);
+        
+    
+            var icon_d350e6d54ebcc9a4974db55dd855b6d1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkred", "prefix": "glyphicon"}
+            );
+            marker_e4dc3e6b973accafcc43d5320fde9121.setIcon(icon_d350e6d54ebcc9a4974db55dd855b6d1);
+        
+    
+            marker_e4dc3e6b973accafcc43d5320fde9121.bindTooltip(
+                `<div>
+                     3. Tłomackie (Great Synagogue site)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a8db01741c36ac69eda7b90b64a7c742 = L.marker(
+                [52.228, 21.014],
+                {}
+            ).addTo(map_37d9139bfb687fb387326b110c992d6f);
+        
+    
+            var icon_2f17344ef54fb28aa30f94f4109c6661 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "cadetblue", "prefix": "glyphicon"}
+            );
+            marker_a8db01741c36ac69eda7b90b64a7c742.setIcon(icon_2f17344ef54fb28aa30f94f4109c6661);
+        
+    
+            marker_a8db01741c36ac69eda7b90b64a7c742.bindTooltip(
+                `<div>
+                     4. Wilcza Street
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5d894ba27d44265eda6db49f87f6d0cb = L.marker(
+                [52.217, 21.045],
+                {}
+            ).addTo(map_37d9139bfb687fb387326b110c992d6f);
+        
+    
+            var icon_76d6074dae20c5f666e5874f75b5de02 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "cadetblue", "prefix": "glyphicon"}
+            );
+            marker_5d894ba27d44265eda6db49f87f6d0cb.setIcon(icon_76d6074dae20c5f666e5874f75b5de02);
+        
+    
+            marker_5d894ba27d44265eda6db49f87f6d0cb.bindTooltip(
+                `<div>
+                     5. Czerniakowska Street
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_ce73914471da4e4b5de4e8142722a9b1 = L.polyline(
+                [[52.2326, 21.0206], [52.241, 21.0192], [52.2433, 20.9998], [52.228, 21.014], [52.217, 21.045]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": "5,5", "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_37d9139bfb687fb387326b110c992d6f);
+        
+</script>
+</html>
