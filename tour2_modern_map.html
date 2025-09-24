@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_07fc83fa2f817cbbeda9c1eff929a770 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>
+    
+    
+    <div style="position: fixed; bottom: 50px; left: 50px; width: 220px; 
+         border:2px solid grey; z-index:9999; font-size:14px;
+         background-color:white; padding: 10px;">
+      <b>Legend</b><br>
+      <i class="fa fa-map-marker fa-2x" style="color:cadetblue"></i>&nbsp; Family / Memoir<br>
+      <i class="fa fa-map-marker fa-2x" style="color:darkred"></i>&nbsp; Community / Religious<br>
+      <i class="fa fa-map-marker fa-2x" style="color:orange"></i>&nbsp; Cultural / Modern<br>
+      <i class="fa fa-map-marker fa-2x" style="color:green"></i>&nbsp; Museums / Memory<br>
+    </div>
+    
+            <div class="folium-map" id="map_07fc83fa2f817cbbeda9c1eff929a770" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_07fc83fa2f817cbbeda9c1eff929a770 = L.map(
+                "map_07fc83fa2f817cbbeda9c1eff929a770",
+                {
+                    center: [52.24, 20.995],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 14,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_aaaf1d07cf70765560b3906ac8197d64 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_07fc83fa2f817cbbeda9c1eff929a770);
+        
+    
+            var marker_990173ebe08586769ce8803c5fb91d5a = L.marker(
+                [52.2395, 20.988],
+                {}
+            ).addTo(map_07fc83fa2f817cbbeda9c1eff929a770);
+        
+    
+            var icon_000eacb3c54e39909c11e49f286ee084 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "cadetblue", "prefix": "glyphicon"}
+            );
+            marker_990173ebe08586769ce8803c5fb91d5a.setIcon(icon_000eacb3c54e39909c11e49f286ee084);
+        
+    
+            marker_990173ebe08586769ce8803c5fb91d5a.bindTooltip(
+                `<div>
+                     1. Leszno Street (various)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_993ea024a5906c51798f1a2cbf8541f0 = L.marker(
+                [52.239, 21.0],
+                {}
+            ).addTo(map_07fc83fa2f817cbbeda9c1eff929a770);
+        
+    
+            var icon_3084c9eb4851775d2b4eb4ccc7f446b5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "cadetblue", "prefix": "glyphicon"}
+            );
+            marker_993ea024a5906c51798f1a2cbf8541f0.setIcon(icon_3084c9eb4851775d2b4eb4ccc7f446b5);
+        
+    
+            marker_993ea024a5906c51798f1a2cbf8541f0.bindTooltip(
+                `<div>
+                     2. Czeplia 26 (erased)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_35904ed0af262b4a8590197fb7964703 = L.marker(
+                [52.2478, 21.0015],
+                {}
+            ).addTo(map_07fc83fa2f817cbbeda9c1eff929a770);
+        
+    
+            var icon_8056f9dbb7cad8d48270870665f216d5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "cadetblue", "prefix": "glyphicon"}
+            );
+            marker_35904ed0af262b4a8590197fb7964703.setIcon(icon_8056f9dbb7cad8d48270870665f216d5);
+        
+    
+            marker_35904ed0af262b4a8590197fb7964703.bindTooltip(
+                `<div>
+                     3. Wałowa Street
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a681e236c6f0f2f1b9815723d7dee7e7 = L.marker(
+                [52.242, 20.9733],
+                {}
+            ).addTo(map_07fc83fa2f817cbbeda9c1eff929a770);
+        
+    
+            var icon_7f3452a7dfbbc2c5c24c23f95fa05400 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkred", "prefix": "glyphicon"}
+            );
+            marker_a681e236c6f0f2f1b9815723d7dee7e7.setIcon(icon_7f3452a7dfbbc2c5c24c23f95fa05400);
+        
+    
+            marker_a681e236c6f0f2f1b9815723d7dee7e7.bindTooltip(
+                `<div>
+                     4. Gęsia / Okopowa Jewish Cemetery
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_64f172896dd91a77a0ac5af7aaa2331e = L.marker(
+                [52.235, 20.999],
+                {}
+            ).addTo(map_07fc83fa2f817cbbeda9c1eff929a770);
+        
+    
+            var icon_67f05a892d2e848babe92d74adf9f6f5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "cadetblue", "prefix": "glyphicon"}
+            );
+            marker_64f172896dd91a77a0ac5af7aaa2331e.setIcon(icon_67f05a892d2e848babe92d74adf9f6f5);
+        
+    
+            marker_64f172896dd91a77a0ac5af7aaa2331e.bindTooltip(
+                `<div>
+                     5. Graniczna Street
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d208856443be344479845efb8f1570b9 = L.marker(
+                [52.2382, 21.0055],
+                {}
+            ).addTo(map_07fc83fa2f817cbbeda9c1eff929a770);
+        
+    
+            var icon_db71523b46310d58a2e6b984f75851c7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "cadetblue", "prefix": "glyphicon"}
+            );
+            marker_d208856443be344479845efb8f1570b9.setIcon(icon_db71523b46310d58a2e6b984f75851c7);
+        
+    
+            marker_d208856443be344479845efb8f1570b9.bindTooltip(
+                `<div>
+                     6. Karmeliczki area
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_162d99793e3a5b545b0911936eb6e043 = L.polyline(
+                [[52.2395, 20.988], [52.239, 21.0], [52.2478, 21.0015], [52.242, 20.9733], [52.235, 20.999], [52.2382, 21.0055]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": "5,5", "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_07fc83fa2f817cbbeda9c1eff929a770);
+        
+</script>
+</html>
