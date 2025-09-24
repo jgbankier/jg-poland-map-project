@@ -38,6 +38,7 @@
 <body>
     
     
+    <!-- Legend -->
     <div style="position: fixed; bottom: 50px; left: 50px; width: 220px; 
          border:2px solid grey; z-index:9999; font-size:14px;
          background-color:white; padding: 10px;">
@@ -46,6 +47,23 @@
       <i class="fa fa-map-marker fa-2x" style="color:darkred"></i>&nbsp; Community / Religious<br>
       <i class="fa fa-map-marker fa-2x" style="color:orange"></i>&nbsp; Cultural / Modern<br>
       <i class="fa fa-map-marker fa-2x" style="color:green"></i>&nbsp; Museums / Memory<br>
+    </div>
+    
+    <!-- Google Maps Controls -->
+    <div style="position: fixed; bottom: 50px; right: 50px; width: 250px;
+         border: 2px solid #0f766e; z-index: 9999; font-size: 14px;
+         background-color: white; padding: 15px; border-radius: 8px;
+         box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+      <b style="color: #0f766e;">🗺️ Google Maps</b><br><br>
+      <button onclick="openFullTourRoute()" 
+              style="width: 100%; padding: 10px; background: #0f766e; color: white; 
+                     border: none; border-radius: 6px; font-size: 14px; cursor: pointer;
+                     margin-bottom: 10px;">
+        📍 Get Directions for Full Tour
+      </button>
+      <div style="font-size: 12px; color: #666; text-align: center;">
+        Click any pin for individual directions
+      </div>
     </div>
     
             <div class="folium-map" id="map_3f9c3c8665a26014521fc4889ca0ad0e" ></div>
@@ -279,6 +297,53 @@
                 [[52.249, 20.993], [52.247, 20.996], [52.246, 20.998], [52.2335, 20.997], [52.233, 20.995], [52.2354, 21.0025], [52.243, 21.001], [52.2347, 20.9987], [52.2352, 21.0015], [52.236, 20.995]],
                 {"bubblingMouseEvents": true, "color": "blue", "dashArray": "5,5", "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.6, "smoothFactor": 1.0, "stroke": true, "weight": 3}
             ).addTo(map_3f9c3c8665a26014521fc4889ca0ad0e);
+
+            // Google Maps Integration
+            const tourStops = [
+                { name: "POLIN Museum", lat: 52.249, lng: 20.993 },
+                { name: "Nalewki (erased)", lat: 52.247, lng: 20.996 },
+                { name: "Muranów District", lat: 52.246, lng: 20.998 },
+                { name: "Grzybowska 65", lat: 52.2335, lng: 20.997 },
+                { name: "Grzybowska 5", lat: 52.233, lng: 20.995 },
+                { name: "Grzybowski Square", lat: 52.2354, lng: 21.0025 },
+                { name: "Tłomackie (Great Synagogue site)", lat: 52.243, lng: 21.001 },
+                { name: "Nożyk Synagogue", lat: 52.2347, lng: 20.9987 },
+                { name: "Charlotte Menora Café", lat: 52.2352, lng: 21.0015 },
+                { name: "Hala Mirowska", lat: 52.236, lng: 20.995 }
+            ];
+
+            const markers = [
+                marker_ca83f9cfa37a7daf8a11ab5ca5aecb39,
+                marker_6a3c7945fe3e98ba04da6d2af2df9db5,
+                marker_3df89c3fb212a7a676ed56b393aaeeec,
+                marker_2fd9fc0aee5c447cb71b9125ddd5dca1,
+                marker_f64ccba0e72d6e2c8aaccfbbac213e59,
+                marker_01f18560d95c5b4c3b491293fb46c00b,
+                marker_ce54961cac38de14506d8c1857458015,
+                marker_0ab8c1f6642210b7a294abeb6b88059c,
+                marker_62ca691f67ac6c425210216d07dbad26,
+                marker_1dfc446a099f7edebde79d1ffcf98fc2
+            ];
+
+            // Add click events to all markers for individual directions
+            markers.forEach((marker, index) => {
+                marker.on('click', function() {
+                    const stop = tourStops[index];
+                    const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${stop.lat},${stop.lng}&destination_place_id=&travelmode=walking`;
+                    window.open(googleMapsUrl, '_blank');
+                });
+            });
+
+            // Function for complete tour route
+            function openFullTourRoute() {
+                // Create waypoints string for Google Maps
+                const waypoints = tourStops.slice(1, -1).map(stop => `${stop.lat},${stop.lng}`).join('|');
+                const start = tourStops[0];
+                const end = tourStops[tourStops.length - 1];
+                
+                const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&origin=${start.lat},${start.lng}&destination=${end.lat},${end.lng}&waypoints=${waypoints}&travelmode=walking`;
+                window.open(googleMapsUrl, '_blank');
+            }
         
 </script>
 </html>
